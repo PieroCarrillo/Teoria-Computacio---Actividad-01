@@ -53,6 +53,17 @@ public:
             }
             if (!trE) break; // si no hay transición, se detiene (seguridad)
         }
+         cout << "Estado final: " << estadoActual << endl;
+
+        // CAMBIO: imprimir la cinta : solo hasta el primer '_'
+        cout << "Cinta final: ";
+        for (char c : cinta) {
+            if (c == '_') break;
+            cout << c;
+        }
+        cout << endl;
+    
     };
 
 };
+
