@@ -84,8 +84,15 @@ public:
         {"q1", '_', "q_accept", '_', DER}
         // (No hacen falta más transiciones)
     };
+	
+	string entrada;
+    cout << "Ingrese palabra (binario sin signo): ";
+    cin >> entrada;
 
-
+    string inicio = "q0";
+    MaquinaTuring mt(inicio, trs, entrada);
+    mt.ejecutar();
+    return 0;
 }
 
 };
