@@ -64,6 +64,29 @@ public:
         cout << endl;
     
     };
+	int main() {
+
+    // q0: mientras lea 0 o 1, avanza a la derecha.
+    // q0: al encontrar '_' escribe '1', avanza a la derecha y pasa a q1.
+    // q1: al ver '_' (el siguiente blanco), simplemente aceptar.
+    //
+    // Resultado: se agrega un '1' al final del número binario.
+
+    vector<Transiciones> trs = {
+        // CAMBIO: recorrer a la derecha sobre bits
+        {"q0", '0', "q0", '0', DER},
+        {"q0", '1', "q0", '1', DER},
+
+        // CAMBIO: al llegar al blanco, escribir '1' y moverse a q1
+        {"q0", '_', "q1", '1', DER},
+
+        // CAMBIO: desde q1, al ver el siguiente blanco, aceptar
+        {"q1", '_', "q_accept", '_', DER}
+        // (No hacen falta más transiciones)
+    };
+
+
+}
 
 };
 
